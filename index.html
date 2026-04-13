@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabores Pupa - Conservas Artesanales al Escabeche</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body>
 
     <!-- PROGRESS BAR -->
@@ -30,13 +32,18 @@
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <img src="./img/4.jpg" alt="Sabores Pupa" class="hero-logo">
-            <h1>Sabores <span>Pupa</span></h1>
-            <p>Conservas artesanales al escabeche · Hechas con amor, ingredientes frescos y recetas de siempre</p>
-            <div class="hero-btns">
-                <a href="#productos" class="btn-primary">Ver Productos</a>
-                <a href="#pedido" class="btn-outline" onclick="pedidoGenerico(event)">Hacer mi Pedido</a>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <img src="./img/4.jpg" alt="Sabores Pupa" class="hero-logo">
+                <h1>Sabores <span>Pupa</span></h1>
+                <p>Conservas artesanales al escabeche · Hechas con amor, ingredientes frescos y recetas de siempre</p>
+                <div class="hero-btns">
+                    <a href="#productos" class="btn-primary">Ver Productos</a>
+                    <a href="#pedido" class="btn-outline" onclick="pedidoGenerico(event)">Hacer mi Pedido</a>
+                </div>
+            </div>
+            <div class="hero-caricatura-wrap">
+                <img src="./img/img.png" alt="La dueña de Sabores Pupa" class="hero-caricatura">
             </div>
         </div>
     </section>
@@ -55,26 +62,31 @@
             <div class="section-title">
                 <h2>Nuestras Especialidades</h2>
                 <div class="divider"></div>
-                <p>Cada frasco es elaborado a mano con los mejores ingredientes. Sin conservantes artificiales, solo sabor real.</p>
+                <p>Cada frasco es elaborado a mano con los mejores ingredientes. Sin conservantes artificiales, solo
+                    sabor real.</p>
             </div>
             <div class="productos">
 
                 <!-- POLLO AL ESCABECHE -->
                 <div class="producto reveal">
                     <div class="producto-img-wrap">
-                        <img src="./img/1.jpg" alt="Pollo al Escabeche" class="prod-img" data-normal="./img/1.jpg" data-xxl="./img/6.jpg">
+                        <img src="./img/1.jpg" alt="Pollo al Escabeche" class="prod-img" data-normal="./img/1.jpg"
+                            data-xxl="./img/6.jpg">
                         <span class="badge">⭐ El más pedido</span>
                     </div>
                     <div class="producto-info">
                         <h3 class="nombre">Pollo al Escabeche</h3>
-                        <p class="descripcion">Pechuga de pollo desmenuzada y tierna, marinada en nuestro escabeche casero con vinagre de manzana, laurel, ajo y especias. Ideal para sándwiches, tartas o platos rápidos.</p>
+                        <p class="descripcion">Pechuga de pollo desmenuzada y tierna, marinada en nuestro escabeche
+                            casero con vinagre de manzana, laurel, ajo y especias. Ideal para sándwiches, tartas o
+                            platos rápidos.</p>
                         <div class="size-toggle">
                             <button class="size-btn active" onclick="selectSize(this, 'normal')">Normal</button>
                             <button class="size-btn" onclick="selectSize(this, 'xxl')">XXL</button>
                         </div>
                         <div class="producto-footer">
                             <div class="precio">
-                                <span class="size-precio active" data-size="normal">$5.000<small>por frasco</small></span>
+                                <span class="size-precio active" data-size="normal">$5.000<small>por
+                                        frasco</small></span>
                                 <span class="size-precio" data-size="xxl">$10.000<small>frasco XXL</small></span>
                             </div>
                             <button class="btn-pedir" onclick="pedirProducto(this)">Pedir</button>
@@ -85,19 +97,22 @@
                 <!-- LENGUA AL ESCABECHE -->
                 <div class="producto reveal" style="transition-delay:0.1s">
                     <div class="producto-img-wrap">
-                        <img src="./img/14.jpg" alt="Lengua al Escabeche" class="prod-img" data-normal="./img/14.jpg" data-xxl="./img/13.jpg">
+                        <img src="./img/14.jpg" alt="Lengua al Escabeche" class="prod-img" data-normal="./img/14.jpg"
+                            data-xxl="./img/16.jpg">
                         <span class="badge" style="background:var(--rojo-oscuro)">🥩 Gourmet</span>
                     </div>
                     <div class="producto-info">
                         <h3 class="nombre">Lengua al Escabeche</h3>
-                        <p class="descripcion">Lengua seleccionada, cocida lentamente y escabechada con cebolla morada, zanahoria, vinagre balsámico y hierbas aromáticas. Un clásico gourmet irresistible.</p>
+                        <p class="descripcion">Lengua seleccionada, cocida lentamente y escabechada con cebolla morada,
+                            zanahoria, vinagre balsámico y hierbas aromáticas. Un clásico gourmet irresistible.</p>
                         <div class="size-toggle">
                             <button class="size-btn active" onclick="selectSize(this, 'normal')">Normal</button>
                             <button class="size-btn" onclick="selectSize(this, 'xxl')">XXL</button>
                         </div>
                         <div class="producto-footer">
                             <div class="precio">
-                                <span class="size-precio active" data-size="normal">$7.000<small>por frasco</small></span>
+                                <span class="size-precio active" data-size="normal">$7.000<small>por
+                                        frasco</small></span>
                                 <span class="size-precio" data-size="xxl">$15.000<small>frasco XXL</small></span>
                             </div>
                             <button class="btn-pedir" onclick="pedirProducto(this)">Pedir</button>
@@ -108,19 +123,22 @@
                 <!-- BERENJENAS AL ESCABECHE -->
                 <div class="producto reveal" style="transition-delay:0.2s">
                     <div class="producto-img-wrap">
-                        <img src="./img/3.jpg" alt="Berenjenas al Escabeche" class="prod-img" data-normal="./img/3.jpg" data-xxl="./img/3.jpg">
+                        <img src="./img/3.jpg" alt="Berenjenas al Escabeche" class="prod-img" data-normal="./img/3.jpg"
+                            data-xxl="./img/3.jpg">
                         <span class="badge verde">🍆 Vegetal</span>
                     </div>
                     <div class="producto-info">
                         <h3 class="nombre">Berenjenas al Escabeche</h3>
-                        <p class="descripcion">Berenjenas cortadas a mano y escabechadas con pimentón, ajo, orégano y aceite. Sabor profundo e intenso. Perfectas como aperitivo, copetín o guarnición.</p>
+                        <p class="descripcion">Berenjenas cortadas a mano y escabechadas con pimentón, ajo, orégano y
+                            aceite. Sabor profundo e intenso. Perfectas como aperitivo, copetín o guarnición.</p>
                         <div class="size-toggle">
                             <button class="size-btn active" onclick="selectSize(this, 'normal')">Normal</button>
                             <button class="size-btn" onclick="selectSize(this, 'xxl')">XXL</button>
                         </div>
                         <div class="producto-footer">
                             <div class="precio">
-                                <span class="size-precio active" data-size="normal">$4.000<small>por frasco</small></span>
+                                <span class="size-precio active" data-size="normal">$4.000<small>por
+                                        frasco</small></span>
                                 <span class="size-precio" data-size="xxl">$8.000<small>frasco XXL</small></span>
                             </div>
                             <button class="btn-pedir" onclick="pedirProducto(this)">Pedir</button>
@@ -136,7 +154,8 @@
                     </div>
                     <div class="producto-info">
                         <h3 class="nombre">Frasco Morrón</h3>
-                        <p class="descripcion">Pimientos morrones rojos y verdes asados, escabechados con ajo, aceite, vinagre de vino y especias mediterráneas. Color y sabor vibrante en cada bocado.</p>
+                        <p class="descripcion">Pimientos morrones rojos y verdes asados, escabechados con ajo, aceite,
+                            vinagre de vino y especias mediterráneas. Color y sabor vibrante en cada bocado.</p>
                         <div class="producto-footer">
                             <div class="precio">$3.000<small>por frasco</small></div>
                             <button class="btn-pedir" onclick="pedirProducto(this)">Pedir</button>
@@ -152,7 +171,9 @@
                     </div>
                     <div class="producto-info">
                         <h3 class="nombre">Frasco Porotos</h3>
-                        <p class="descripcion">Porotos criollos de primera calidad, escabechados con comino, pimentón ahumado, ají y nuestro vinagre casero. Proteína vegetal con sabor auténtico e inolvidable.</p>
+                        <p class="descripcion">Porotos criollos de primera calidad, escabechados con comino, pimentón
+                            ahumado, ají y nuestro vinagre casero. Proteína vegetal con sabor auténtico e inolvidable.
+                        </p>
                         <div class="producto-footer">
                             <div class="precio">$3.000<small>por frasco</small></div>
                             <button class="btn-pedir" onclick="pedirProducto(this)">Pedir</button>
@@ -176,7 +197,8 @@
                 <div class="combo-body reveal-right">
                     <span class="combo-tag">🎉 Oferta Limitada</span>
                     <h2>Combo Familiar Completo</h2>
-                    <p>Llevate todas nuestras especialidades y ahorrá. Ideal para tener la alacena lista todo el mes.</p>
+                    <p>Llevate todas nuestras especialidades y ahorrá. Ideal para tener la alacena lista todo el mes.
+                    </p>
                     <div class="combo-precio">$18.500 <del>$22.800</del></div>
                     <div class="combo-ahorro">✅ Ahorrás 20% + Envío Gratis</div>
                     <button class="btn-combo" onclick="pedirCombo()">¡Quiero el Combo!</button>
@@ -233,7 +255,8 @@
                     </div>
                     <div class="resena-body">
                         <div class="resena-estrellas">★★★★★</div>
-                        <p class="resena-texto">Lo consumo todos los días en mi merienda y almuerzo. Es riquísimo y se nota que está hecho con ingredientes de calidad.</p>
+                        <p class="resena-texto">Lo consumo todos los días en mi merienda y almuerzo. Es riquísimo y se
+                            nota que está hecho con ingredientes de calidad.</p>
                         <div class="resena-autor">
                             <img src="./img/8.jpg" alt="Adrián Lucero" class="resena-avatar">
                             <div>
@@ -250,7 +273,8 @@
                     </div>
                     <div class="resena-body">
                         <div class="resena-estrellas">★★★★★</div>
-                        <p class="resena-texto">Mortal! Pupi me hace unas tostaditas... riquísimo todo 😊 Esta combinación va como piña, recomendadísimo!</p>
+                        <p class="resena-texto">Mortal! Pupi, me hice unas tostaditas... riquísimo todo 😊 Esta
+                            combinación va como piña, recomendadísimo!</p>
                         <div class="resena-autor">
                             <img src="./img/9.jpg" alt="Naty" class="resena-avatar">
                             <div>
@@ -267,7 +291,8 @@
                     </div>
                     <div class="resena-body">
                         <div class="resena-estrellas">★★★★★</div>
-                        <p class="resena-texto">¡Esto es un golazo! Muy rico, de verdad. La calidad se nota desde el primer bocado. Lo recomiendo a todos!</p>
+                        <p class="resena-texto">¡Esto es un golazo! Muy rico, de verdad. La calidad se nota desde el
+                            primer bocado. Lo recomiendo a todos!</p>
                         <div class="resena-autor">
                             <img src="./img/10.jpg" alt="Karen Ramírez" class="resena-avatar">
                             <div>
@@ -289,13 +314,15 @@
         <p>Conservas artesanales al escabeche · Hechas con amor</p>
         <img src="./img/5.jpg" alt="Sabores Pupa productos" class="footer-banner">
         <hr class="footer-divider">
-        <p>📱 <a href="https://wa.me/5491168351743?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20Sabores%20Pupa">Contactanos por WhatsApp</a></p>
+        <p>📱 <a href="https://wa.me/5491168351743?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20Sabores%20Pupa">Contactanos
+                por WhatsApp</a></p>
         <p>📦 Envíos a todo el país &nbsp;|&nbsp; Consultas por mayoristas</p>
         <div class="footer-bottom">&copy; <span id="year"></span> Sabores Pupa. Todos los derechos reservados.</div>
     </footer>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5491168351743?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20Sabores%20Pupa" class="whatsapp-float" target="_blank" rel="noopener" title="Escribinos por WhatsApp">
+    <a href="https://wa.me/5491168351743?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20Sabores%20Pupa"
+        class="whatsapp-float" target="_blank" rel="noopener" title="Escribinos por WhatsApp">
         💬
     </a>
 
@@ -380,4 +407,5 @@
         });
     </script>
 </body>
+
 </html>
