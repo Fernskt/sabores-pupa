@@ -520,6 +520,91 @@
         }
         .footer-bottom { font-size: 0.8rem; color: #666; margin-top: 1rem; }
 
+        /* ── RESEÑAS ── */
+        .resenas-section {
+            padding: 4rem 2rem;
+            background: var(--crema-oscura);
+        }
+        .resenas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .resena-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .resena-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+        }
+        .resena-foto-wrap {
+            position: relative;
+            overflow: hidden;
+            height: 220px;
+        }
+        .resena-foto-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .resena-card:hover .resena-foto-wrap img { transform: scale(1.05); }
+        .resena-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .resena-estrellas {
+            color: #FFC107;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+        }
+        .resena-texto {
+            color: var(--texto);
+            font-size: 0.97rem;
+            line-height: 1.65;
+            font-style: italic;
+            flex: 1;
+        }
+        .resena-texto::before { content: '"'; font-size: 1.5rem; color: var(--rojo); line-height: 0; vertical-align: -0.4rem; margin-right: 2px; }
+        .resena-texto::after  { content: '"'; font-size: 1.5rem; color: var(--rojo); line-height: 0; vertical-align: -0.4rem; margin-left: 2px; }
+        .resena-autor {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #f0e8d8;
+        }
+        .resena-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--rojo);
+            flex-shrink: 0;
+        }
+        .resena-nombre {
+            font-weight: 900;
+            font-size: 0.95rem;
+            color: var(--rojo);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .resena-tag {
+            font-size: 0.75rem;
+            color: var(--gris);
+        }
+
         /* ── WHATSAPP FLOAT ── */
         .whatsapp-float {
             position: fixed;

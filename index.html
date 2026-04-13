@@ -23,7 +23,7 @@
                 <span>Conservas Artesanales</span>
             </div>
         </div>
-        <a href="#pedido" class="nav-cta">Hacer Pedido</a>
+        <a href="#pedido" class="nav-cta" onclick="pedidoGenerico(event)">Hacer Pedido</a>
     </nav>
 
     <!-- HERO -->
@@ -36,7 +36,7 @@
             <p>Conservas artesanales al escabeche · Hechas con amor, ingredientes frescos y recetas de siempre</p>
             <div class="hero-btns">
                 <a href="#productos" class="btn-primary">Ver Productos</a>
-                <a href="#pedido" class="btn-outline">Hacer mi Pedido</a>
+                <a href="#pedido" class="btn-outline" onclick="pedidoGenerico(event)">Hacer mi Pedido</a>
             </div>
         </div>
     </section>
@@ -77,7 +77,7 @@
                                 <span class="size-precio active" data-size="normal">$5.000<small>por frasco</small></span>
                                 <span class="size-precio" data-size="xxl">$10.000<small>frasco XXL</small></span>
                             </div>
-                            <a href="#pedido" class="btn-pedir">Pedir</a>
+                            <button class="btn-pedir" onclick="pedirProducto(this)">Pedir</button>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                                 <span class="size-precio active" data-size="normal">$7.000<small>por frasco</small></span>
                                 <span class="size-precio" data-size="xxl">$15.000<small>frasco XXL</small></span>
                             </div>
-                            <a href="#pedido" class="btn-pedir">Pedir</a>
+                            <button class="btn-pedir" onclick="pedirProducto(this)">Pedir</button>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                                 <span class="size-precio active" data-size="normal">$4.000<small>por frasco</small></span>
                                 <span class="size-precio" data-size="xxl">$8.000<small>frasco XXL</small></span>
                             </div>
-                            <a href="#pedido" class="btn-pedir">Pedir</a>
+                            <button class="btn-pedir" onclick="pedirProducto(this)">Pedir</button>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                         <p class="descripcion">Pimientos morrones rojos y verdes asados, escabechados con ajo, aceite, vinagre de vino y especias mediterráneas. Color y sabor vibrante en cada bocado.</p>
                         <div class="producto-footer">
                             <div class="precio">$3.000<small>por frasco</small></div>
-                            <a href="#pedido" class="btn-pedir">Pedir</a>
+                            <button class="btn-pedir" onclick="pedirProducto(this)">Pedir</button>
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                         <p class="descripcion">Porotos criollos de primera calidad, escabechados con comino, pimentón ahumado, ají y nuestro vinagre casero. Proteína vegetal con sabor auténtico e inolvidable.</p>
                         <div class="producto-footer">
                             <div class="precio">$3.000<small>por frasco</small></div>
-                            <a href="#pedido" class="btn-pedir">Pedir</a>
+                            <button class="btn-pedir" onclick="pedirProducto(this)">Pedir</button>
                         </div>
                     </div>
                 </div>
@@ -217,6 +217,71 @@
         </div>
     </section>
 
+    <!-- RESEÑAS -->
+    <section class="resenas-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Qué dicen nuestros clientes?</h2>
+                <div class="divider"></div>
+                <p>Cada frasco lleva sabor y cariño. Estas son las opiniones de quienes ya lo probaron.</p>
+            </div>
+            <div class="resenas-grid">
+
+                <div class="resena-card reveal">
+                    <div class="resena-foto-wrap">
+                        <img src="./img/8.jpg" alt="Reseña de Adrián Lucero">
+                    </div>
+                    <div class="resena-body">
+                        <div class="resena-estrellas">★★★★★</div>
+                        <p class="resena-texto">Lo consumo todos los días en mi merienda y almuerzo. ¡No puedo parar! Es riquísimo y se nota que está hecho con ingredientes de calidad.</p>
+                        <div class="resena-autor">
+                            <img src="./img/8.jpg" alt="Adrián Lucero" class="resena-avatar">
+                            <div>
+                                <div class="resena-nombre">Adrián Lucero</div>
+                                <div class="resena-tag">Cliente frecuente ✅</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resena-card reveal" style="transition-delay:0.15s">
+                    <div class="resena-foto-wrap">
+                        <img src="./img/9.jpg" alt="Reseña de Naty">
+                    </div>
+                    <div class="resena-body">
+                        <div class="resena-estrellas">★★★★★</div>
+                        <p class="resena-texto">Mortal! Pupi me hace unas tostaditas... riquísimo todo 😊 Esta combinación va como piña, no puedo creer lo bueno que está!</p>
+                        <div class="resena-autor">
+                            <img src="./img/9.jpg" alt="Naty" class="resena-avatar">
+                            <div>
+                                <div class="resena-nombre">Naty</div>
+                                <div class="resena-tag">Cliente verificada ✅</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resena-card reveal" style="transition-delay:0.3s">
+                    <div class="resena-foto-wrap">
+                        <img src="./img/10.jpg" alt="Reseña de Karen Ramírez">
+                    </div>
+                    <div class="resena-body">
+                        <div class="resena-estrellas">★★★★★</div>
+                        <p class="resena-texto">¡Esto es un golazo! Muy rico, de verdad. La calidad se nota desde el primer bocado. Lo recomiendo a todos!</p>
+                        <div class="resena-autor">
+                            <img src="./img/10.jpg" alt="Karen Ramírez" class="resena-avatar">
+                            <div>
+                                <div class="resena-nombre">Karen Ramírez</div>
+                                <div class="resena-tag">Cliente verificada ✅</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER / CONTACTO -->
     <footer id="pedido">
         <img src="./img/4.jpg" alt="Sabores Pupa" class="footer-logo">
@@ -261,28 +326,41 @@
             });
         });
 
+        // Pedido genérico (nav + hero)
+        function pedidoGenerico(e) {
+            e.preventDefault();
+            const msg = encodeURIComponent('Hola Maru! Quiero hacer un pedido de Sabores Pupa 😊');
+            window.open(`https://wa.me/5491168351743?text=${msg}`, '_blank');
+        }
+
         // Size toggle
         function selectSize(btn, size) {
             const card = btn.closest('.producto');
-            // Toggle buttons
             card.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            // Toggle prices
             card.querySelectorAll('.size-precio').forEach(p => p.classList.remove('active'));
             card.querySelector(`.size-precio[data-size="${size}"]`).classList.add('active');
-            // Swap image if available
             const img = card.querySelector('.prod-img');
             if (img && img.dataset[size]) img.src = img.dataset[size];
         }
 
-        // Pedido por WhatsApp
-        function pedirProducto(nombre) {
-            const msg = encodeURIComponent(`Hola! Quiero pedir: ${nombre}`);
+        // Pedir producto específico desde card
+        function pedirProducto(btn) {
+            const card = btn.closest('.producto');
+            const nombre = card.querySelector('.nombre').textContent.trim();
+            const sizeBtn = card.querySelector('.size-btn.active');
+            const size = sizeBtn ? sizeBtn.textContent.trim() : '';
+            const precioEl = card.querySelector('.size-precio.active') || card.querySelector('.precio');
+            const precio = precioEl ? precioEl.textContent.replace(/\s+/g, ' ').trim() : '';
+            const sizeTexto = size ? ` (${size})` : '';
+            const msg = encodeURIComponent(
+                `Hola Maru! Quiero pedir: ${nombre}${sizeTexto} - ${precio}. Muchas gracias! 🙌`
+            );
             window.open(`https://wa.me/5491168351743?text=${msg}`, '_blank');
         }
 
         function pedirCombo() {
-            const msg = encodeURIComponent('Hola! Quiero el Combo Familiar Completo de Sabores Pupa 🎉');
+            const msg = encodeURIComponent('Hola Maru! Quiero el Combo Familiar Completo de Sabores Pupa 🎉');
             window.open(`https://wa.me/5491168351743?text=${msg}`, '_blank');
         }
 
