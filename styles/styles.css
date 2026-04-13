@@ -313,10 +313,18 @@
      background: var(--verde);
      color: white;
      display: flex;
-     justify-content: center;
+     justify-content: flex-start;
+     padding: 0.9rem 0;
+     overflow: hidden;
+ }
+
+ .trust-track {
+     display: flex;
      gap: 2.5rem;
-     padding: 0.9rem 1rem;
-     flex-wrap: wrap;
+     min-width: max-content;
+     padding: 0 1.5rem;
+     will-change: transform;
+     animation: marquee 22s linear infinite;
  }
 
  .trust-item {
@@ -325,10 +333,20 @@
      gap: 0.45rem;
      font-size: 0.9rem;
      font-weight: 700;
+     white-space: nowrap;
  }
 
  .trust-item .icon {
      font-size: 1.2rem;
+ }
+
+ @keyframes marquee {
+     0%   { transform: translateX(0); }
+     100% { transform: translateX(-25%); }
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+     .trust-track { animation: none; }
  }
 
  /* ── SECTION TITLES ── */
