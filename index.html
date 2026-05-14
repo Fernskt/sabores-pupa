@@ -457,6 +457,23 @@
         // Dynamic year
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // Parallax hero background + caricatura zoom/fade
+        const heroBg = document.querySelector('.hero-bg');
+        const heroSection = document.querySelector('.hero');
+        const caricaturaWrap = document.querySelector('.hero-caricatura-wrap');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const heroHeight = heroSection.offsetHeight;
+
+            // Fondo: se mueve más lento que el scroll (parallax)
+            heroBg.style.transform = `translateY(${scrollY * 0.5}px)`;
+
+            // Caricatura: zoom + fade en el primer 60% del hero
+            const progress = Math.min(scrollY / (heroHeight * 0.6), 1);
+            caricaturaWrap.style.transform = `scale(${1 + progress * 0.9})`;
+            caricaturaWrap.style.opacity = 1 - progress;
+        });
+
         // Scroll progress bar
         window.addEventListener('scroll', () => {
             const scrolled = window.scrollY;
